@@ -4,8 +4,13 @@
 </mat-toolbar>
 
 <div class="centered">
-  <form action="">
-    <button mat-raised-button color="primary"> Test </button>
+  <form [formGroup]="testForm">
+    <mat-form-field class="full-width">
+      <mat-label> Test </mat-label>
+      <input matInput placeholder="Ex. a test input" formControlName="test">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="onTest()"> Go Test </button>
   </form>  
 </div>
 
